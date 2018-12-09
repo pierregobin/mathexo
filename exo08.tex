@@ -55,7 +55,17 @@ $f$ , déterminer les valeurs qui annulent $f'$ , en déduire les extremums et l
 \end{tikzpicture}
   }
   
-  \solution{}
+  \solution{Le domaine de définition de $f$ est $\mathbb{R}$.
+  Sa dérivée : $f'(t) = 8.exp(-\dfrac{t}{8}) + (8t+64).(-1/8).exp(-\dfrac{t}{8})$ et après simplification : $f'(t) =-t exp(-\dfrac{t}{8})$. $f'$ est s'annule en $0$, est positive sur
+$\mathbb{R}^{*-}$ et négative sur $\mathbb{R}^{*-}$.
+\\
+  \begin{tikzpicture}
+     \tkzTabInit{$t$ / 1, $f'(t)$ / 1 , $f$ / 1}{$-\infty$, $0$, $+\infty$}
+     \tkzTabLine{,+,z,-,}
+     \tkzTabVar{-/ $-\infty$, +C/ $64$, -/ $-\infty$}
+\end{tikzpicture}
+
+  }
 %  \end{multicols}
 \end{document}
 
