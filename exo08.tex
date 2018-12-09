@@ -43,7 +43,7 @@ $f$ , déterminer les valeurs qui annulent $f'$ , en déduire les extremums et l
 \variation{$f(t) = -t + 1 + ln(-2t + 8)$}
 \variation{$f(t) = t^2+14t+5$}
 \variation{$f(t) = (6t+48)exp(\dfrac{t}{6})$}
-\variation{$f(t)=\dfrac{t}{3} + 7 + \ln(7)$}
+\variation{$f(t)=\dfrac{t}{3} + 7 + \ln(t)$}
 
 \section{corrigés}
 %  \begin{multicols}{2}
@@ -68,6 +68,32 @@ $\mathbb{R}^{*-}$ et négative sur $\mathbb{R}^{*-}$.
 
 \solution{La fonction $f(t) = -t + 1 + ln(-2t + 8)$ est définie lorsque $-2t+8 > 0$, soit $t < -4$. $D_f =]-\infty,-4[$. Elle est dérivable sur $D_f$. Sa dérivée vaut : $f'(t) = -1 + -\dfrac{2}{-2t+8}$ après simplification, $f'(t) = \dfrac{t-5}{-t+4}$. $f'$ est négative sur $D_f$, $f$ est donc décroissante sur $D_f$.}
   }
+
+\solution{La fonction $f(t) = t^2+14t+5$ est définie sur $\mathbb{R}$ tout entier. Sa dérivée est $f'(t) = 2t+14$, elle s'annule en $-7$.\\
+  \begin{tikzpicture}
+     \tkzTabInit{$t$ / 1, $f'(t)$ / 1 , $f$ / 1}{$-\infty$, $-7$, $+\infty$}
+     \tkzTabLine{,-,z,+,}
+     \tkzTabVar{
+     +/ $+\infty$, -C/ $-44$, +/ $+\infty$}
+\end{tikzpicture}
+
+}
+
+\solution{La fonction $f(t) = (6t+48)\exp(\dfrac{t}{6})$ est définie sur $\mathbb{R}$. Elle est dérivable, sa dérivée est : $f'(t) = 6 \exp(\dfrac{t}{6}) + (6t+48)\dfrac{1}{6}\exp(\dfrac{t}{6})$, soit $f'(t) = (t+14)\exp(\dfrac{t}{6})$. $f'$ s'annule en $-14$, elle est négative pour $t < -14$ et positive pour $t > -14$.\\
+  \begin{tikzpicture}
+     \tkzTabInit{$t$ / 1, $f'(t)$ / 1 , $f$ / 1}{$-\infty$, $-14$, $+\infty$}
+     \tkzTabLine{,-,z,+,}
+     \tkzTabVar{
+     +/ , -C/ $-36\exp(\dfrac{-7}{3})$, +/}
+\end{tikzpicture}
+
+
+}
+
+\solution{
+La fonction $f(t)=\dfrac{t}{3} + 7 + \ln(t)$. Son domaine de définition est $D_f = \mathbb{R}^{*+}$. Sa dérivé est $f'(t)=\dfrac{1}{3}+\dfrac{1}{t}$. Sur $D_f$, $f'$ est strictement positive, donc $f$ est croissante sur $\mathbb{R}^{*+}$. }
+
+
 %  \end{multicols}
 \end{document}
 
