@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{ae,lmodern}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tikz,tkz-tab}
+\usepackage{multicol}
+\usepackage{xcolor}
+
+\usepackage[a4paper,top=1cm,bottom=1cm,left=3cm,right=3cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcounter{numexos}
+\setcounter{numexos}{0}
+\newcommand{\exercice}[1]{
+\addtocounter{numexos}{1}
+\textcolor{red}{Exercice\,\thenumexos\,:}\,#1
+\\
+}
+
+\newcounter{solexos}
+\setcounter{solexos}{0}
+\newcommand{\solution}[1]{
+\addtocounter{solexos}{1}
+\textcolor{red}{Correction\,\thesolexos\,:}\,#1
+}
+
+
+\newcommand{\variation}[1]{
+\exercice{calculer la dérivée de 
+$f$ , déterminer les valeurs qui annulent $f'$ , en déduire les extremums et les variations de $f$.\,#1
+}
+}
+
+\begin{document}
+\title{variations}
+\section{Enoncés des exercices}
+
+\variation{$f(t) = -\dfrac{t}{9} + 4 + \ln(t)$}
+\variation{$f(t) = (8t+64)*exp(-t/8)$}
+\variation{$f(t) = -t + 1 + ln(-2t + 8)$}
+\variation{$f(t) = t^2+14t+5$}
+\variation{$f(t) = (6t+48)exp(\dfrac{t}{6})$}
+\variation{$f(t)=\dfrac{t}{3} + 7 + \ln(7)$}
+
+\section{corrigés}
+%  \begin{multicols}{2}
+  \solution{On détermine le domaine de définition de $f$. $f(t) = -\dfrac{t}{9} + 4 + \ln(t)$. $f$ est définie pour $t > 0$ à cause de $\ln$. Donc $D_f = \mathbb{R}^{+*}$.  $f$ est dérivable sur $D_f$ et sa dérivée $f'(t) = -\dfrac{1}{9} + \dfrac{1}{t}$. La dérivée s'annule en $t=9$.\\
+  \begin{tikzpicture}
+     \tkzTabInit{$t$ / 1, $f'(t)$ / 1 , $f$ / 1}{$0$, $9$, $+\infty$}
+     \tkzTabLine{d,+,z,-,}
+     \tkzTabVar{-/ $-\infty$, +C/ $3+\ln(9)$, -/ $-\infty$}
+\end{tikzpicture}
+  }
+  
+  \solution{}
+%  \end{multicols}
+\end{document}
+
