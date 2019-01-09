@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{ae,lmodern}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tikz,tkz-tab}
+\usepackage{multicol}
+\usepackage{xcolor}
+
+
+\usepackage[a4paper,top=1cm,bottom=1cm,left=3cm,right=3cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcounter{numexos}
+\setcounter{numexos}{0}
+\newcommand{\exercice}[1]{
+\addtocounter{numexos}{1}
+\textcolor{red}{Exercice\,\thenumexos\,:}\,#1
+\\
+}
+
+\newcommand{\variation}[1]{
+\exercice{Déterminer le domaine de définition de $f$ ainsi que son domaine de dérivabilité. calculer la dérivée de 
+$f$ , déterminer les valeurs qui annulent $f'$ , en déduire les extremums et les variations de $f$. Ainsi que les valeurs en  $\pm\infty$ ,#1
+}
+}
+
+\begin{document}
+\title{variations}
+\section{Enoncés des exercices}
+
+\exercice{Rappel des définitions de : signal causal, signal pair, signal impaire, support borné avec des exemples...}
+
+\exercice{Classer les fonctions suivantes par la relation d'ordre $\ll$ : $x^5, \exp(-x), \ln(x), 1, \dfrac{exp(x^2)}{x^{10}},(1+\cos(x^4))exp(10x)-\ln(x)$}
+\exercice{Déterminer le domaine de définition et de dérivabilité et les dérivées  de $\ln(x), \ln(|x|)$. Que peut-on dire de $\ln(|x|)$ ?. Déduite le graphe de $\ln(|x-4|$ à partir de celui de $\ln(|x|)$}
+\exercice{Déterminer le domaine de définition et de dérivabilité et les dérivées  de $\ln(\cos(x)), \ln(|\cos(x)|)$.}
+
+\exercice{Que peut-on dire de $f(x) = x.exp(x^2)$ ? (parité, limite en $\pm\infty$)}
+\exercice{Déterminer $\lim_{x\to 0} x.exp(\dfrac{-1}{x^2})$ (choisir un changement de variable approprié)}
+\exercice{Soit $f(x) = \exp\dfrac{-1}{(|x|-1)^2}$ pour $|x|<1$ et $f(x)=0 pour |x|\geq 0$. Quel est le domaine de définition de $f$ ?. Que peut-on dire sur $f$ ? (parité, support, limites en des points particuliers.). On définit $F_3(x) = \sum_{k=-\infty}^{\infty} f(x-3k)$, Que peut on dire de $F_3$ ? Quel est la valeur de $F_3(9)$ ? $F_3(6,5)$ ?}
+\variation{$f(t) = -\dfrac{t}{9} + 4 + \ln(t)$}
+\variation{$f(t) = (8t+64)*exp(-t/8)$}
+\variation{$f(t) = -t + 1 + ln(-2t + 8)$}
+\variation{$f(t) = t^2+14t+5$}
+\variation{$f(t) = (6t+48)exp(\dfrac{t}{6})$}
+\variation{$f(t)=\dfrac{t}{3} + 7 + \ln(t)$}
+
+\end{document}
+
